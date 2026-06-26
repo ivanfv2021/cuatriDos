@@ -1,14 +1,16 @@
 import { Component,signal } from "@angular/core";
+import { CharacterFormComponent } from "../../components/character-form/character-form.component";
 interface Character{
     id:number;
     name:string;
     power:number;
 }
 @Component({
-    selector: 'app-anime',
-    templateUrl: './anime-page.component.html'
+    selector: 'app-anime-super',
+    imports:[CharacterFormComponent],
+    templateUrl: './anime-super-page.component.html'
 })
-export class AnimeComponent{
+export class AnimeSuperComponent{
     name = signal('');
     power = signal(0);
     characters = signal<Character[]>([
